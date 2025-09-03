@@ -15,6 +15,11 @@ header {
   background: white;
 }
 
+.header-h1 {
+  margin-left: 5%;
+  font-size: 100px;
+}
+
 .logo {
   font-weight: bold;
   font-size: 1.5rem;
@@ -209,6 +214,36 @@ footer {
   .kontakt-container {
     flex-direction: column;
   }
+
+  .header-h1 {
+    margin-left: 10%;
+    font-size: 20px;
+  }
+
+  .logo-img {
+  height: 60px; /* ili po želji */
+  width: auto;
+  margin-left: 10px;
+  }
+
+  nav {
+  gap: 5px;
+  margin-left: auto; /* guramo nav što desnije možemo */
+  margin-right: 2px; /* malo razmaka prema jezicima */
+  font-size: smaller;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-h1 {
+    margin-left: 25%;
+    font-size: 30px;
+  }
+
+  .logo-img {
+  height: 90px; /* ili po želji */
+  width: auto;
+  margin-left: 30px;
 }
 
 .service-slika {

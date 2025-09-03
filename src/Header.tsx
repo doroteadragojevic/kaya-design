@@ -8,6 +8,7 @@ export default function Header({ onChangePage }) {
           className="logo-img"
         />
       </div>
+      <h1 className="header-h1">KAYA DESIGN</h1>
       <nav>
         <button onClick={() => onChangePage('projekti')}>PROJEKTI</button>
         <button onClick={() => onChangePage('gradevinska')}>USLUGE</button>

@@ -5,6 +5,7 @@ import Kontakt from './Contact';
 import Footer from './Footer';
 import Usluge from './Services';
 import ServiceDetail from './Service';
+import ProjectPage from './ProjectPage';
 
 export default function App() {
   const [page, setPage] = useState('projekti');
@@ -21,6 +22,7 @@ export default function App() {
         {page === 'gradevinska' && <Usluge onChangePage={setPage} />}
         {page === 'keramika' && <ServiceDetail service="keramika" />}
 {page === 'mramor' && <ServiceDetail service="mramor" />}
+{page === 'rixos' && <ProjectPage project="rixos" />}
       </main>
 
       <Footer />
