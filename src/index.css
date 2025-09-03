@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.logo-img {
+  height: 90px; /* ili po želji */
+  width: auto;
+  margin-left: 30px;
+}
+
+
+/* Nav će biti flex container, ali ne zauzima cijeli prostor, pa ćemo staviti marginu lijevo da se pomakne desno */
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto; /* guramo nav što desnije možemo */
+  margin-right: 2rem; /* malo razmaka prema jezicima */
+}
+
+nav button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+}
+
+nav button:hover {
+  color: #004080;
+}
+
+.languages {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 16px;
+}
+
+.languages button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  color: #555;
+}
+
+
+main {
+  max-width: 100%;
+  margin: auto;
+}
+
+
+.grid-slike {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* veći min-width */
+  margin-top: 1rem;
+  width: 100vw; /* proširi grid do punog viewport width */
+  box-sizing: border-box;
+}
+
+.projekt-slika {
+  position: relative;
+  overflow: hidden;
+  width: 100%;          /* širina se kontrolira gridom, neka bude fluidno */
+height: 350px; /* povećana visina */
+  border-radius:1px;
+  cursor: pointer;
+}
+
+.projekt-slika img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* da slika popuni cijeli container bez izobličenja */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.projekt-slika:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(229, 229, 229, 0.5); /* sivi poluprozirni sloj */
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* tekst je pri dnu */
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.projekt-slika:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3, .overlay p {
+  margin: 0;
+  color: black;
+  font-weight: lighter;
+}
+
+.kontakt-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 1200px;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.kontakt-info {
+  flex: 1 1 300px;
+}
+
+.kontakt-info h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #0d213f;
+}
+
+.kontakt-info p {
+  margin: 0.3rem 0;
+  color: #111;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a img {
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5rem;
+}
+
+.kontakt-forma {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.kontakt-forma input,
+.kontakt-forma textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background-color: #eee;
+  color: #333;
+}
+
+.kontakt-forma button {
+  align-self: flex-start;
+  padding: 0.6rem 1.2rem;
+  background-color: #0d213f;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.kontakt-forma button:hover {
+  background-color: #004080;
+}
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f0f0f0;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .kontakt-container {
+    flex-direction: column;
+  }
+}
+
+.service-slika {
+  position: relative;
+  overflow: hidden;
+  width: 100%;          /* širina se kontrolira gridom, neka bude fluidno */
+height: 350px; /* povećana visina */
+  border-radius:1px;
+  cursor: pointer;
+  
+}
+
+.service-slika img {
+width: 100%;
+  height: 100%;
+  object-fit: cover;    /* da slika popuni cijeli container bez izobličenja */
+  display: block;
+  transition: transform 0.3s ease;  
+}
+
+/* Konstantni overlay */
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(229, 229, 229, 0.5); /* sivi poluprozirni sloj */
+  display: flex;
+  align-items: center;   /* centriranje po vertikali */
+  justify-content: center; /* centriranje po horizontali */
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center; /* ako naslov ima više linija */
+}
+
+
+/* Tekst u donjem lijevom kutu */
+.service-overlay h3 {
+  margin: 0;
+  color: black;
+  font-weight: lighter;
+  font-size: 21px;
+}
+
+.tab-heading {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 0;
+  text-align: left;
+  margin-left: 1.5rem; /* bez navodnika! */
+  margin-top: 1.5rem;
+}
