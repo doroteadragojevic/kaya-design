@@ -9,7 +9,7 @@ import ProjectPage from "./ProjectPage";
 
 export default function App() {
   return (
-    <Router basename="/kaya-design">
+    <Router>
       <Header />
       <main>
         <Routes>
