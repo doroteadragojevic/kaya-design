@@ -1,31 +1,27 @@
-import { useState } from 'react';
-import Header from './Header';
-import Projekti from './Projects';
-import Kontakt from './Contact';
-import Footer from './Footer';
-import Usluge from './Services';
-import ServiceDetail from './Service';
-import ProjectPage from './ProjectPage';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./Header";
+import Projekti from "./Projects";
+import Kontakt from "./Contact";
+import Footer from "./Footer";
+import Usluge from "./Services";
+import ServiceDetail from "./Service";
+import ProjectPage from "./ProjectPage";
 
 export default function App() {
-  const [page, setPage] = useState('projekti');
-
   return (
-    <>
-      <Header onChangePage={setPage} />
-   
+    <Router>
+      <Header />
       <main>
-        {page === 'projekti' && (
-          <Projekti onChangePage={setPage} activePage={page} />
-        )}
-        {page === 'kontakt' && <Kontakt />}
-        {page === 'gradevinska' && <Usluge onChangePage={setPage} />}
-        {page === 'keramika' && <ServiceDetail service="keramika" />}
-{page === 'mramor' && <ServiceDetail service="mramor" />}
-{page === 'rixos' && <ProjectPage project="rixos" />}
+        <Routes>
+          <Route path="/" element={<Projekti />} />
+          <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/gradevinska" element={<Usluge />} />
+          <Route path="/keramika" element={<ServiceDetail service="keramika" />} />
+          <Route path="/mramor" element={<ServiceDetail service="mramor" />} />
+          <Route path="/rixos" element={<ProjectPage project="rixos" />} />
+        </Routes>
       </main>
-
       <Footer />
-    </>
+    </Router>
   );
 }

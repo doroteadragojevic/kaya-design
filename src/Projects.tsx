@@ -11,7 +11,7 @@ export default function Projekti({ onChangePage, activePage }) {
   return (
     <section>
 
-        <SectionTabs onChangePage={onChangePage} activePage={activePage} />
+        <SectionTabs />
 
       <div className="grid-slike">
         {slike.map((slika, i) => (
@@ -19,7 +19,6 @@ export default function Projekti({ onChangePage, activePage }) {
           key={i} 
           {...slika}
           page={slika.page}     
-          onChangePage={onChangePage} // klik šalje prema App
           />
         ))}
       </div>

@@ -1,5 +1,6 @@
 import ServiceComponent from "./ServiceComponent";
 import Kontakt from "./Contact";
+import SectionTabs from "./Sections";
 
 export default function Usluge({ onChangePage, activePage }) {
   const slike = [
@@ -14,6 +15,7 @@ export default function Usluge({ onChangePage, activePage }) {
 
   return (
     <section>
+  <SectionTabs />
       <p className="tab-heading">Interijer</p>
 
       <div className="grid-slike">
@@ -22,7 +24,6 @@ export default function Usluge({ onChangePage, activePage }) {
             key={i}
             {...slika}
             page={slika.page}     
-            onChangePage={onChangePage} // klik šalje prema App
           />
         ))}
       </div>

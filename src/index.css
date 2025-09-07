@@ -32,24 +32,24 @@ header {
 }
 
 
-/* Nav će biti flex container, ali ne zauzima cijeli prostor, pa ćemo staviti marginu lijevo da se pomakne desno */
 nav {
   display: flex;
   gap: 1rem;
-  margin-left: auto; /* guramo nav što desnije možemo */
-  margin-right: 2rem; /* malo razmaka prema jezicima */
+  margin-left: auto;  /* gura nav desno */
+  margin-right: 2rem; /* razmak prema jezicima */
 }
 
-nav button {
+nav a {
   background: none;
   border: none;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
   color: #333;
+  text-decoration: none; /* maknemo underline */
 }
 
-nav button:hover {
+nav a:hover {
   color: #004080;
 }
 

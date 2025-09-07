@@ -9,9 +9,9 @@ export default function Kontakt() {
         />
         {/*        <p><strong>Headquarters:</strong> Mike Tripala 10, 21000 Split HR</p>
  */}
-        <p><strong>Phone:</strong> +385(0)21 246830</p>
+        {/*<p><strong>Phone:</strong> +385(0)21 246830</p> */}
         <p><strong>Whatsapp:</strong> +385(0)984648447</p>
-        <p><strong>E-mail:</strong> info@haros.hr</p>
+        <p><strong>E-mail:</strong> alp@kayadesign.hr</p>
         {/*<p><strong>OIB:</strong> 75350831376</p> */}
         <div className="social-icons">
           {/* Zamijeni linkovima */}

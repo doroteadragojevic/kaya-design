@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Header({ onChangePage }) {
   return (
     <header>
@@ -10,9 +12,9 @@ export default function Header({ onChangePage }) {
       </div>
       {/*<h1 className="header-h1">KAYA DESIGN</h1> */}
       <nav>
-        <button onClick={() => onChangePage('projekti')}>PROJEKTI</button>
-        <button onClick={() => onChangePage('gradevinska')}>USLUGE</button>
-        <button onClick={() => onChangePage('kontakt')}>KONTAKT</button>
+        <Link to="/" className="nav-btn">PROJEKTI</Link>
+<Link to="/gradevinska" className="nav-btn">USLUGE</Link>
+<Link to="/kontakt" className="nav-btn">KONTAKT</Link>
       </nav>
       <div className="languages">
         {/* <button>HR</button>

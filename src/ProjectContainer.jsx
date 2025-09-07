@@ -1,11 +1,17 @@
-export default function ProjektSlika({ src, alt, title, location, page, onChangePage }) {
+import { useNavigate } from "react-router-dom";
+
+export default function ProjektSlika({ src, alt, title, location, page }) {
+  const navigate = useNavigate();
+
   return (
-    <div className="projekt-slika"
-    onClick={() => {
-        if (onChangePage && page) {
-          onChangePage(page);   // sad će poslati npr. "keramika"
+    <div
+      className="projekt-slika"
+      onClick={() => {
+        if (page) {
+          navigate(`/${page}`);
         }
-      }}>
+      }}
+    >
       <img src={src} alt={alt} />
       {title && (
         <div className="overlay">
