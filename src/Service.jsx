@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Kontakt from "./Contact";
 import "./ServiceDetail.css";
+import SectionTabs from "./Sections";
 
 export default function ServiceDetail({ service }) {
   const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -10,14 +11,28 @@ export default function ServiceDetail({ service }) {
     keramika: {
       title: "Keramičarski radovi",
       description: [
-        "Postavljanje pločica na pod i zid",
-        "Izrada dekorativnih mozaika",
-        "Popravci i zamjene oštećenih pločica"
+        "Postavljanje keramike: podovi, zidovi, kupaonice, kuhinje, balkoni",
+    "Uklanjanje stare keramike i priprema podloge",
+    "Polaganje novih pločica na podove i zidove",
+    "Dekorativne keramičke i mozaik obloge",
+    "Keramičke obloge za kupaonice, kuhinje i balkone",
+    "Postavljanje keramike na stepenice",
+    "Oblaganje i hidroizolacija bazena keramikom",
+    "Obnova i zamjena fuga",
+    "Popravak i zamjena oštećenih ili puknutih pločica",
+    "Posebna rješenja prema mjeri i dizajnu"
       ],
       images: [
-        "/services/keramika/1.jpg",
-        "/services/keramika/2.jpg",
-        "/services/keramika/3.jpg"
+        "/services/keramika/1.jpeg",
+        "/services/keramika/2.jpeg",
+        "/services/keramika/3.jpeg",
+        "/services/keramika/4.jpeg",
+        "/services/keramika/5.jpeg",
+        "/services/keramika/6.jpeg",
+        "/services/keramika/7.jpeg",
+        "/services/keramika/8.jpeg",
+        "/services/keramika/9.jpeg",
+
       ]
     },
     mramor: {
@@ -31,6 +46,23 @@ export default function ServiceDetail({ service }) {
         "/services/mramor/1.jpg",
         "/services/mramor/2.jpg",
         "/services/mramor/3.jpg"
+      ]
+    },
+    parket: {
+      title: "Parket",
+      description: [
+        "Postavljanje parketa (laminat, masivni, višeslojni parket)",
+    "Uklanjanje starog parketa i priprema podloge",
+    "Brušenje, lakiranje i poliranje parketa",
+    "Popravak i zamjena oštećenih parketnih dasaka",
+    "Postavljanje vodootpornog parketa za kuhinje i kupaonice",
+    "Ugradnja parketnih lajsni"
+      ],
+      images: [
+        "/services/parket/1.jpeg",
+        "/services/parket/2.jpeg",
+        "/services/parket/3.jpeg",
+        "/services/parket/4.jpeg"
       ]
     }
   };
@@ -51,8 +83,10 @@ export default function ServiceDetail({ service }) {
   };
 
   return (
+      
     <div className="service-detail-container">
       <h1>{selected.title}</h1>
+      
       <ul>
         {selected.description.map((item, i) => (
           <li key={i}>{item}</li>

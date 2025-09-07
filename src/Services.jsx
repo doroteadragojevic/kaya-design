@@ -4,9 +4,9 @@ import SectionTabs from "./Sections";
 
 export default function Usluge({ onChangePage, activePage }) {
   const slike = [
-    { src: '/keramika.jpg', alt: 'KERAMIKA', title: 'POSTAVLJANJE \nKERAMIKE', page: 'keramika' },
+    { src: '/services/keramika/9.jpeg', alt: 'KERAMIKA', title: 'POSTAVLJANJE \nKERAMIKE', page: 'keramika' },
     { src: '/fasada.jpg', alt: 'FASADA', title: 'FASADA', page: 'fasada' },
-    { src: '/parket.jpg', alt: 'POSTAVLJANJE PARKETA', title: 'POSTAVLJANJE \nPARKETA', page: 'parket' },
+    { src: '/services/parket/2.jpeg', alt: 'POSTAVLJANJE PARKETA', title: 'POSTAVLJANJE \nPARKETA', page: 'parket' },
     { src: '/mramor.jpg', alt: 'POSTAVLJANJE I OBRADA MRAMORA', title: 'POSTAVLJANJE I \nOBRADA \nMRAMORA', page: 'mramor' },
     { src: '/suha_gradnja.jpg', alt: 'SUHA GRADNJA', title: 'SUHA \nGRADNJA', page: 'suha_gradnja' },
     { src: '/zbukanje.jpg', alt: 'ŽBUKA', title: 'ŽBUKA', page: 'zbukanje' },
