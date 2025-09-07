@@ -20,6 +20,7 @@ export default function Kontakt() {
           {/*<a href="#"><img src="/facebook-icon.jpg" alt="Facebook" /></a> */}
         </div>
       </div>
+     
 
 {/*
       <form className="kontakt-forma" onSubmit={(e) => e.preventDefault()}>
