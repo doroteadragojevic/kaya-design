@@ -126,14 +126,14 @@ vanjski_radovi: {
   if (!selected) return <h2>Servis nije pronađen</h2>;
 
   const handlePrev = (e) => {
-    e.stopPropagation(); // sprječava zatvaranje lightboxa
+    e.stopPropagation();
     setLightboxIndex(
       (lightboxIndex - 1 + selected.images.length) % selected.images.length
     );
   };
 
   const handleNext = (e) => {
-    e.stopPropagation(); // sprječava zatvaranje lightboxa
+    e.stopPropagation();
     setLightboxIndex((lightboxIndex + 1) % selected.images.length);
   };
 
@@ -145,12 +145,14 @@ vanjski_radovi: {
   return (
     <div className="service-detail-container">
       <h1>{selected.title}</h1>
-      
-      <ul>
-        {selected.description.map((item, i) => (
-          <li key={i}>{item}</li>
-        ))}
-      </ul>
+
+      <div className="project-details">
+        <ul>
+          {selected.description.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      </div>
 
       <div className="service-gallery">
         {selected.images.map((img, i) => (
@@ -164,24 +166,17 @@ vanjski_radovi: {
         ))}
       </div>
 
-      {/* Lightbox modal */}
       {lightboxIndex !== null && (
         <div className="lightbox" onClick={handleClose}>
-          <span className="close" onClick={handleClose}>
-            &times;
-          </span>
-          <span className="arrow left" onClick={handlePrev}>
-            &#10094;
-          </span>
+          <span className="close" onClick={handleClose}>&times;</span>
+          <span className="arrow left" onClick={handlePrev}>&#10094;</span>
           <img
             src={selected.images[lightboxIndex]}
             alt={`Slika ${lightboxIndex + 1}`}
             className="lightbox-image"
-            onClick={(e) => e.stopPropagation()} // sprječava zatvaranje kad klikneš sliku
+            onClick={(e) => e.stopPropagation()}
           />
-          <span className="arrow right" onClick={handleNext}>
-            &#10095;
-          </span>
+          <span className="arrow right" onClick={handleNext}>&#10095;</span>
         </div>
       )}
 

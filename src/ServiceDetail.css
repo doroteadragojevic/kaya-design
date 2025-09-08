@@ -1,4 +1,3 @@
-/* Container */
 .service-detail-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -6,48 +5,29 @@
 }
 
 .service-detail-container h1 {
-  margin-left: 5%;
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
-  .service-detail-container h1 {
-    margin-left: 10%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .service-detail-container h1 {
-    margin-left: 15%;
-  }
-}
-
-.project-details {
+.project-details ul {
   margin-bottom: 20px;
-  line-height: 1.6;
+  padding-left: 20px;
 }
 
-.project-details p {
-  margin: 8px 0;
+.project-details li {
+  margin-bottom: 6px;
 }
 
-.project-details strong {
-  font-weight: bold;
-  display: inline-block;
-  min-width: 140px;
-}
-
-/* Gallery */
+/* GALERIJA - koristimo CSS Grid */
 .service-gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 10px;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .service-gallery .thumbnail {
-  width: calc(25% - 10px); /* 4 slike po redu na desktopu */
+  width: 100%;
   border-radius: 6px;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -57,7 +37,7 @@
   transform: scale(1.05);
 }
 
-/* Lightbox */
+/* LIGHTBOX */
 .lightbox {
   position: fixed;
   top: 0;
@@ -65,7 +45,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.85);
-  display: none; /* sakriven dok se ne klikne */
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
@@ -76,44 +56,32 @@
   max-width: 90%;
   max-height: 80%;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
-.lightbox .close {
+.close {
   position: absolute;
   top: 20px;
   right: 30px;
   font-size: 40px;
-  font-weight: bold;
   color: white;
   cursor: pointer;
 }
 
-/* Arrows */
 .arrow {
   position: absolute;
   top: 50%;
   font-size: 50px;
   color: white;
   cursor: pointer;
+  transform: translateY(-50%);
   user-select: none;
   padding: 10px;
-  transform: translateY(-50%);
 }
 
-.arrow.left {
-  left: 30px;
-}
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
 
-.arrow.right {
-  right: 30px;
-}
-
-.arrow:hover {
-  color: #ddd;
-}
-
-/* RESPONSIVE - MOBITEL */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .service-detail-container {
     padding: 15px;
@@ -121,26 +89,21 @@
 
   .service-detail-container h1 {
     font-size: 1.5rem;
-    margin-left: 5%;
-  }
-
-  .service-gallery .thumbnail {
-    width: calc(33.33% - 8px); /* 3 slike po redu na mobitelu */
-  }
-
-  .lightbox-image {
-    max-width: 95%;
-    max-height: 75%;
   }
 
   .arrow {
     font-size: 35px;
-    padding: 8px;
+    padding: 5px;
   }
 
-  .lightbox .close {
+  .close {
     font-size: 35px;
     top: 15px;
-    right: 20px;
+    right: 15px;
+  }
+
+  /* Grid za mobitel automatski smanjuje broj kolona */
+  .service-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   }
 }
