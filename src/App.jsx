@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Projekti from "./Projects";
 import Kontakt from "./Contact";
@@ -9,7 +9,7 @@ import ProjectPage from "./ProjectPage";
 
 export default function App() {
   return (
-    <Router>
+    <Router >
       <Header />
       <main>
         <Routes>
@@ -27,6 +27,6 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-    </Router>
+    </Router >
   );
 }
