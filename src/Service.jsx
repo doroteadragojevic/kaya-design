@@ -122,23 +122,27 @@ vanjski_radovi: {
 
   };
 
-  const selected = servicesData[service];
+   const selected = servicesData[service];
   if (!selected) return <h2>Servis nije pronađen</h2>;
 
   const handlePrev = (e) => {
-    e.stopPropagation();
+    e.stopPropagation(); // sprječava zatvaranje lightboxa
     setLightboxIndex(
       (lightboxIndex - 1 + selected.images.length) % selected.images.length
     );
   };
 
   const handleNext = (e) => {
-    e.stopPropagation();
+    e.stopPropagation(); // sprječava zatvaranje lightboxa
     setLightboxIndex((lightboxIndex + 1) % selected.images.length);
   };
 
+  const handleClose = (e) => {
+    e.stopPropagation();
+    setLightboxIndex(null);
+  };
+
   return (
-      
     <div className="service-detail-container">
       <h1>{selected.title}</h1>
       
@@ -162,8 +166,10 @@ vanjski_radovi: {
 
       {/* Lightbox modal */}
       {lightboxIndex !== null && (
-        <div className="lightbox" onClick={() => setLightboxIndex(null)}>
-          <span className="close">&times;</span>
+        <div className="lightbox" onClick={handleClose}>
+          <span className="close" onClick={handleClose}>
+            &times;
+          </span>
           <span className="arrow left" onClick={handlePrev}>
             &#10094;
           </span>
@@ -171,6 +177,7 @@ vanjski_radovi: {
             src={selected.images[lightboxIndex]}
             alt={`Slika ${lightboxIndex + 1}`}
             className="lightbox-image"
+            onClick={(e) => e.stopPropagation()} // sprječava zatvaranje kad klikneš sliku
           />
           <span className="arrow right" onClick={handleNext}>
             &#10095;
