@@ -1,3 +1,4 @@
+/* ProjectPage.css */
 .service-detail-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -5,29 +6,50 @@
 }
 
 .service-detail-container h1 {
+  margin-left: 5%;
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.project-details ul {
+@media (min-width: 768px) {
+  .service-detail-container h1 {
+    margin-left: 10%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-detail-container h1 {
+    margin-left: 15%;
+  }
+}
+
+.project-details {
   margin-bottom: 20px;
-  padding-left: 20px;
+  line-height: 1.6;
 }
 
-.project-details li {
-  margin-bottom: 6px;
+.project-details p {
+  margin: 8px 0;
 }
 
-/* GALERIJA - koristimo CSS Grid */
+.project-details strong {
+  font-weight: bold;
+  display: inline-block;
+  min-width: 140px;
+}
+
 .service-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
+/* Thumbnail: fiksna veličina + obrezivanje slike */
 .service-gallery .thumbnail {
-  width: 100%;
+  width: 150px;       /* fiksna širina */
+  height: 100px;      /* fiksna visina */
+  object-fit: cover;  /* obrezuje sliku da popuni thumbnail, bez izduživanja */
   border-radius: 6px;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -37,7 +59,8 @@
   transform: scale(1.05);
 }
 
-/* LIGHTBOX */
+
+/* Lightbox */
 .lightbox {
   position: fixed;
   top: 0;
@@ -49,61 +72,45 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
-  padding: 10px;
 }
 
 .lightbox-image {
   max-width: 90%;
   max-height: 80%;
   border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
-.close {
+.lightbox .close {
   position: absolute;
   top: 20px;
   right: 30px;
   font-size: 40px;
+  font-weight: bold;
   color: white;
   cursor: pointer;
 }
 
+/* Strelice */
 .arrow {
   position: absolute;
   top: 50%;
   font-size: 50px;
   color: white;
   cursor: pointer;
-  transform: translateY(-50%);
   user-select: none;
   padding: 10px;
+  transform: translateY(-50%);
 }
 
-.arrow.left { left: 20px; }
-.arrow.right { right: 20px; }
+.arrow.left {
+  left: 30px;
+}
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .service-detail-container {
-    padding: 15px;
-  }
+.arrow.right {
+  right: 30px;
+}
 
-  .service-detail-container h1 {
-    font-size: 1.5rem;
-  }
-
-  .arrow {
-    font-size: 35px;
-    padding: 5px;
-  }
-
-  .close {
-    font-size: 35px;
-    top: 15px;
-    right: 15px;
-  }
-
-  /* Grid za mobitel automatski smanjuje broj kolona */
-  .service-gallery {
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  }
+.arrow:hover {
+  color: #ddd;
 }

@@ -122,7 +122,7 @@ vanjski_radovi: {
 
   };
 
-   const selected = servicesData[service];
+  const selected = servicesData[service];
   if (!selected) return <h2>Servis nije pronađen</h2>;
 
   const handlePrev = (e) => {
@@ -137,22 +137,16 @@ vanjski_radovi: {
     setLightboxIndex((lightboxIndex + 1) % selected.images.length);
   };
 
-  const handleClose = (e) => {
-    e.stopPropagation();
-    setLightboxIndex(null);
-  };
-
   return (
+      
     <div className="service-detail-container">
       <h1>{selected.title}</h1>
-
-      <div className="project-details">
-        <ul>
-          {selected.description.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      </div>
+      
+      <ul>
+        {selected.description.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
+      </ul>
 
       <div className="service-gallery">
         {selected.images.map((img, i) => (
@@ -166,17 +160,21 @@ vanjski_radovi: {
         ))}
       </div>
 
+      {/* Lightbox modal */}
       {lightboxIndex !== null && (
-        <div className="lightbox" onClick={handleClose}>
-          <span className="close" onClick={handleClose}>&times;</span>
-          <span className="arrow left" onClick={handlePrev}>&#10094;</span>
+        <div className="lightbox" onClick={() => setLightboxIndex(null)}>
+          <span className="close">&times;</span>
+          <span className="arrow left" onClick={handlePrev}>
+            &#10094;
+          </span>
           <img
             src={selected.images[lightboxIndex]}
             alt={`Slika ${lightboxIndex + 1}`}
             className="lightbox-image"
-            onClick={(e) => e.stopPropagation()}
           />
-          <span className="arrow right" onClick={handleNext}>&#10095;</span>
+          <span className="arrow right" onClick={handleNext}>
+            &#10095;
+          </span>
         </div>
       )}
 
