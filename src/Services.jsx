@@ -5,12 +5,10 @@ import SectionTabs from "./Sections";
 export default function Usluge({ onChangePage, activePage }) {
   const slike = [
     { src: '/services/keramika/9.jpeg', alt: 'KERAMIKA', title: 'POSTAVLJANJE \nKERAMIKE', page: 'keramika' },
-    { src: '/fasada.jpg', alt: 'FASADA', title: 'FASADA', page: 'fasada' },
     { src: '/services/parket/2.jpeg', alt: 'POSTAVLJANJE PARKETA', title: 'POSTAVLJANJE \nPARKETA', page: 'parket' },
-    { src: '/mramor.jpg', alt: 'POSTAVLJANJE I OBRADA MRAMORA', title: 'POSTAVLJANJE I \nOBRADA \nMRAMORA', page: 'mramor' },
-    { src: '/suha_gradnja.jpg', alt: 'SUHA GRADNJA', title: 'SUHA \nGRADNJA', page: 'suha_gradnja' },
-    { src: '/zbukanje.jpg', alt: 'ŽBUKA', title: 'ŽBUKA', page: 'zbukanje' },
-    { src: '/boja.jpg', alt: 'BOJA', title: 'BOJA', page: 'boja' },
+    { src: '/services/mramor/2.jpeg', alt: 'POSTAVLJANJE I OBRADA MRAMORA', title: 'POSTAVLJANJE I \nOBRADA \nMRAMORA', page: 'mramor' },
+    { src: '/services/vanjski_radovi/2.jpeg', alt: 'VANJSKI RADOVI I UREDENJE PROCELJA', title: 'VANJSKI RADOVI I \nUREĐENJE PROČELJA', page: 'vanjski_radovi' },
+    { src: '/services/boja/1.jpeg', alt: 'SLIKARSKI I \nDEKORATIVNI RADOVI', title: 'SLIKARSKI I \nDEKORATIVNI RADOVI', page: 'boja' },
   ];
 
   return (

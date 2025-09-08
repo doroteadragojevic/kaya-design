@@ -19,6 +19,10 @@ export default function App() {
           <Route path="/keramika" element={<ServiceDetail service="keramika" />} />
           <Route path="/parket" element={<ServiceDetail service="parket" />} />
           <Route path="/mramor" element={<ServiceDetail service="mramor" />} />
+          <Route path="/boja" element={<ServiceDetail service="boja" />} />
+          <Route path="/vanjski_radovi" element={<ServiceDetail service="vanjski_radovi" />} />
+
+
           <Route path="/rixos" element={<ProjectPage project="rixos" />} />
         </Routes>
       </main>

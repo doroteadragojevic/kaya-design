@@ -38,14 +38,23 @@ export default function ServiceDetail({ service }) {
     mramor: {
       title: "Radovi s mramorom",
       description: [
-        "Postavljanje mramornih ploča",
-        "Poliranje i obrada",
-        "Ugradnja kuhinjskih radnih ploča"
+        "Postavljanje mramora (podovi, kuhinjske radne ploče, kupaonice, stolovi, balkoni)",
+    "Uklanjanje starog mramora i postavljanje novog",
+    "Mramorne obloge za stepenice i ulazne prostore",
+    "Ugradnja i obnova mramornih okvira za liftove",
+    "Poliranje, brušenje i obnavljanje površina",
+    "Popravak i zamjena oštećenih ili puknutih mramornih elemenata",
+    "Dekorativne mramorne obloge za unutarnje i vanjske prostore"
       ],
       images: [
-        "/services/mramor/1.jpg",
-        "/services/mramor/2.jpg",
-        "/services/mramor/3.jpg"
+        "/services/mramor/1.jpeg",
+        "/services/mramor/2.jpeg",
+        "/services/mramor/3.jpeg",
+        "/services/mramor/4.jpeg",
+        "/services/mramor/12.jpeg",
+        "/services/mramor/14.jpeg",
+        "/services/mramor/13.jpeg",
+
       ]
     },
     parket: {
@@ -64,7 +73,53 @@ export default function ServiceDetail({ service }) {
         "/services/parket/3.jpeg",
         "/services/parket/4.jpeg"
       ]
-    }
+    },
+    boja: {
+  title: "Slikarski i dekorativni radovi",
+  description: [
+    "Unutarnje bojanje zidova i stropova",
+    "Vanjsko bojanje i radovi na izolaciji fasade",
+    "Dekorativne tehnike bojanja (sedef, efekt, uzorci)",
+    "Postavljanje i uklanjanje tapeta",
+    "Ugradnja i dekorativne primjene staklenog tekstila",
+    "Gletanje, žbukanje i priprema podloge",
+    "Bojanje vrata, prozora i drvenih površina",
+    "Projekti za urede, trgovine i stambene prostore",
+    "Savjetovanje o bojama i dizajnu prilagođenom prostoru"
+  ],
+  images: [
+    "/services/boja/1.jpeg",
+    "/services/boja/2.jpeg",
+    "/services/boja/3.jpeg",
+    "/services/boja/4.jpeg",
+    "/services/boja/5.jpeg",
+    "/services/boja/6.jpeg",
+    "/services/boja/7.jpeg",
+    "/services/boja/8.jpeg",
+    "/services/boja/9.jpeg",
+    "/services/boja/10.jpeg",
+    "/services/boja/12.jpeg",
+  ]
+},
+vanjski_radovi: {
+  title: "Vanjski radovi i uređenje pročelja",
+  description: [
+    "Vanjsko bojanje",
+    "Toplinska i hidroizolacija (sustavi fasadne izolacije)",
+    "Postavljanje i obnova vanjskih obloga",
+    "Dekorativno žbukanje i završne obloge pročelja",
+    "Oblaganje kamenom, opekom i kompozitnim panelima",
+    "Dekorativni elementi za balkone, prozore i pročelja",
+    "Popravci i održavanje oštećenih vanjskih površina",
+    "Rješenja za uređenje okoliša usklađena s pročeljem"
+  ],
+  images: [
+    "/services/vanjski_radovi/1.jpeg",
+    "/services/vanjski_radovi/2.jpeg"
+  ]
+},
+
+
   };
 
   const selected = servicesData[service];
