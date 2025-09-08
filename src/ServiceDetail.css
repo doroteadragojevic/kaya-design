@@ -11,18 +11,6 @@
   margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
-  .service-detail-container h1 {
-    margin-left: 10%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .service-detail-container h1 {
-    margin-left: 15%;
-  }
-}
-
 .project-details {
   margin-bottom: 20px;
   line-height: 1.6;
@@ -43,6 +31,7 @@
   flex-wrap: wrap;
   gap: 10px;
   margin: 20px 0;
+  justify-content: center; /* centra galeriju na malim ekranima */
 }
 
 .service-gallery .thumbnail {
@@ -69,11 +58,12 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  padding: 10px; /* da se slika smjesti unutar ekrana */
 }
 
 .lightbox-image {
-  max-width: 90%;
-  max-height: 80%;
+  max-width: 100%;
+  max-height: 90%;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
@@ -81,33 +71,69 @@
 .lightbox .close {
   position: absolute;
   top: 20px;
-  right: 30px;
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
+  right: 20px;
+  font-size: 35px;
 }
 
 /* Strelice */
 .arrow {
   position: absolute;
   top: 50%;
-  font-size: 50px;
+  font-size: 40px;
   color: white;
   cursor: pointer;
   user-select: none;
-  padding: 10px;
+  padding: 8px;
   transform: translateY(-50%);
 }
 
 .arrow.left {
-  left: 30px;
+  left: 10px;
 }
 
 .arrow.right {
-  right: 30px;
+  right: 10px;
 }
 
 .arrow:hover {
   color: #ddd;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .service-detail-container {
+    padding: 15px;
+  }
+
+  .service-detail-container h1 {
+    margin-left: 5%;
+    font-size: 1.5rem;
+  }
+
+  .project-details strong {
+    display: block;
+    min-width: auto;
+    margin-bottom: 5px;
+  }
+
+  .service-gallery .thumbnail {
+    width: 30%; /* galerija se bolje prilagođava širini ekrana */
+  }
+
+  .arrow {
+    font-size: 30px;
+    padding: 5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .service-detail-container h1 {
+    margin-left: 8%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-detail-container h1 {
+    margin-left: 15%;
+  }
 }
