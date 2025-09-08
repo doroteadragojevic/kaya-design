@@ -11,6 +11,18 @@
   margin-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+  .service-detail-container h1 {
+    margin-left: 10%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-detail-container h1 {
+    margin-left: 15%;
+  }
+}
+
 .project-details {
   margin-bottom: 20px;
   line-height: 1.6;
@@ -31,7 +43,6 @@
   flex-wrap: wrap;
   gap: 10px;
   margin: 20px 0;
-  justify-content: center; /* centra galeriju na malim ekranima */
 }
 
 .service-gallery .thumbnail {
@@ -62,8 +73,8 @@
 }
 
 .lightbox-image {
-  max-width: 100%;
-  max-height: 90%;
+  max-width: 90%;
+  max-height: 80%;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
@@ -71,35 +82,38 @@
 .lightbox .close {
   position: absolute;
   top: 20px;
-  right: 20px;
-  font-size: 35px;
+  right: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
 }
 
 /* Strelice */
 .arrow {
   position: absolute;
   top: 50%;
-  font-size: 40px;
+  font-size: 50px;
   color: white;
   cursor: pointer;
   user-select: none;
-  padding: 8px;
+  padding: 10px;
   transform: translateY(-50%);
 }
 
 .arrow.left {
-  left: 10px;
+  left: 30px;
 }
 
 .arrow.right {
-  right: 10px;
+  right: 30px;
 }
 
 .arrow:hover {
   color: #ddd;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE - MOBITEL */
 @media (max-width: 768px) {
   .service-detail-container {
     padding: 15px;
@@ -110,30 +124,23 @@
     font-size: 1.5rem;
   }
 
-  .project-details strong {
-    display: block;
-    min-width: auto;
-    margin-bottom: 5px;
+  .service-gallery .thumbnail {
+    width: 80px; /* manje slike na mobitelu */
   }
 
-  .service-gallery .thumbnail {
-    width: 30%; /* galerija se bolje prilagođava širini ekrana */
+  .lightbox-image {
+    max-width: 95%;
+    max-height: 75%;
   }
 
   .arrow {
-    font-size: 30px;
-    padding: 5px;
+    font-size: 35px;
+    padding: 8px;
   }
-}
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  .service-detail-container h1 {
-    margin-left: 8%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .service-detail-container h1 {
-    margin-left: 15%;
+  .lightbox .close {
+    font-size: 35px;
+    top: 15px;
+    right: 20px;
   }
 }
