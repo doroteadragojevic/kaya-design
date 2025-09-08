@@ -23,15 +23,15 @@ export default function ServiceDetail({ service }) {
     "Posebna rješenja prema mjeri i dizajnu"
       ],
       images: [
-        "/services/keramika/1.jpeg",
-        "/services/keramika/2.jpeg",
-        "/services/keramika/3.jpeg",
-        "/services/keramika/4.jpeg",
-        "/services/keramika/5.jpeg",
-        "/services/keramika/6.jpeg",
-        "/services/keramika/7.jpeg",
-        "/services/keramika/8.jpeg",
-        "/services/keramika/9.jpeg",
+        "/kaya-design/services/keramika/1.jpeg",
+        "/kaya-design/services/keramika/2.jpeg",
+        "/kaya-design/services/keramika/3.jpeg",
+        "/kaya-design/services/keramika/4.jpeg",
+        "/kaya-design/services/keramika/5.jpeg",
+        "/kaya-design/services/keramika/6.jpeg",
+        "/kaya-design/services/keramika/7.jpeg",
+        "/kaya-design/services/keramika/8.jpeg",
+        "/kaya-design/services/keramika/9.jpeg",
 
       ]
     },
@@ -47,13 +47,13 @@ export default function ServiceDetail({ service }) {
     "Dekorativne mramorne obloge za unutarnje i vanjske prostore"
       ],
       images: [
-        "/services/mramor/1.jpeg",
-        "/services/mramor/2.jpeg",
-        "/services/mramor/3.jpeg",
-        "/services/mramor/4.jpeg",
-        "/services/mramor/12.jpeg",
-        "/services/mramor/14.jpeg",
-        "/services/mramor/13.jpeg",
+        "/kaya-design/services/mramor/1.jpeg",
+        "/kaya-design/services/mramor/2.jpeg",
+        "/kaya-design/services/mramor/3.jpeg",
+        "/kaya-design/services/mramor/4.jpeg",
+        "/kaya-design/services/mramor/12.jpeg",
+        "/kaya-design/services/mramor/14.jpeg",
+        "/kaya-design/services/mramor/13.jpeg",
 
       ]
     },
@@ -68,10 +68,10 @@ export default function ServiceDetail({ service }) {
     "Ugradnja parketnih lajsni"
       ],
       images: [
-        "/services/parket/1.jpeg",
-        "/services/parket/2.jpeg",
-        "/services/parket/3.jpeg",
-        "/services/parket/4.jpeg"
+        "/kaya-design/services/parket/1.jpeg",
+        "/kaya-design/services/parket/2.jpeg",
+        "/kaya-design/services/parket/3.jpeg",
+        "/kaya-design/services/parket/4.jpeg"
       ]
     },
     boja: {
@@ -88,17 +88,17 @@ export default function ServiceDetail({ service }) {
     "Savjetovanje o bojama i dizajnu prilagođenom prostoru"
   ],
   images: [
-    "/services/boja/1.jpeg",
-    "/services/boja/2.jpeg",
-    "/services/boja/3.jpeg",
-    "/services/boja/4.jpeg",
-    "/services/boja/5.jpeg",
-    "/services/boja/6.jpeg",
-    "/services/boja/7.jpeg",
-    "/services/boja/8.jpeg",
-    "/services/boja/9.jpeg",
-    "/services/boja/10.jpeg",
-    "/services/boja/12.jpeg",
+    "/kaya-design/services/boja/1.jpeg",
+    "/kaya-design/services/boja/2.jpeg",
+    "/kaya-design/services/boja/3.jpeg",
+    "/kaya-design/services/boja/4.jpeg",
+    "/kaya-design/services/boja/5.jpeg",
+    "/kaya-design/services/boja/6.jpeg",
+    "/kaya-design/services/boja/7.jpeg",
+    "/kaya-design/services/boja/8.jpeg",
+    "/kaya-design/services/boja/9.jpeg",
+    "/kaya-design/services/boja/10.jpeg",
+    "/kaya-design/services/boja/12.jpeg",
   ]
 },
 vanjski_radovi: {
@@ -114,8 +114,8 @@ vanjski_radovi: {
     "Rješenja za uređenje okoliša usklađena s pročeljem"
   ],
   images: [
-    "/services/vanjski_radovi/1.jpeg",
-    "/services/vanjski_radovi/2.jpeg"
+    "/kaya-design/services/vanjski_radovi/1.jpeg",
+    "/kaya-design/services/vanjski_radovi/2.jpeg"
   ]
 },
 

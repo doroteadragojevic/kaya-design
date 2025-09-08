@@ -5,7 +5,7 @@ export default function Header({ onChangePage }) {
     <header>
       <div className="logo">
         <img 
-          src="/logo.jpeg" 
+          src="/kaya-design/logo.jpeg" 
           alt="Logo" 
           className="logo-img"
         />

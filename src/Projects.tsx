@@ -5,7 +5,7 @@ import Kontakt from './Contact';
 
 export default function Projekti({ onChangePage, activePage }) {
   const slike = [
-    { src: '/projekti/rixos/710720145.jpg', alt: 'Rixos', title: 'Rixos Hotel', location: 'Dubrovnik', page: 'rixos' },
+    { src: '/kaya-design/projekti/rixos/710720145.jpg', alt: 'Rixos', title: 'Rixos Hotel', location: 'Dubrovnik', page: 'rixos' },
   ];
 
   return (
