@@ -25,12 +25,12 @@ export default function ProjectPage({ project }) {
         location: "Dubrovnik, Hrvatska",
       },
       gallery: [
-        "/kaya-design/projekti/rixos/519848187.jpg",
-        "/kaya-design/projekti/rixos/519848290.jpg",
-        "/kaya-design/projekti/rixos/710720145.jpg",
-        "/kaya-design/projekti/rixos/712613436.jpg",
-        "/kaya-design/projekti/rixos/712613462.jpg",
-        "/kaya-design/projekti/rixos/712616974.jpg",
+        "/projekti/rixos/519848187.jpg",
+        "/projekti/rixos/519848290.jpg",
+        "/projekti/rixos/710720145.jpg",
+        "/projekti/rixos/712613436.jpg",
+        "/projekti/rixos/712613462.jpg",
+        "/projekti/rixos/712616974.jpg",
       ],
     },
   };
