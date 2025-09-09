@@ -47,12 +47,23 @@
 
 /* Thumbnail: fiksna veličina + obrezivanje slike */
 .service-gallery .thumbnail {
-  width: 150px;       /* fiksna širina */
-  height: 100px;      /* fiksna visina */
-  object-fit: cover;  /* obrezuje sliku da popuni thumbnail, bez izduživanja */
+   width: 100%;
+  max-width: 200px; /* zadrži maksimalnu širinu na desktopu */
+  height: auto;
   border-radius: 6px;
   cursor: pointer;
   transition: transform 0.2s ease;
+}
+
+@media (max-width: 480px) {
+  .service-gallery {
+    justify-content: center;
+  }
+
+  .service-gallery .thumbnail {
+    width: 90%; /* slike zauzimaju skoro cijeli ekran na mobitelu */
+    max-width: none;
+  }
 }
 
 .service-gallery .thumbnail:hover {
