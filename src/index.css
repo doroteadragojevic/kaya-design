@@ -245,7 +245,7 @@ footer {
   width: auto;
   margin-left: 30px;
 }
-
+}
 .service-slika {
   position: relative;
   overflow: hidden;
@@ -298,4 +298,14 @@ width: 100%;
   text-align: left;
   margin-left: 1.5rem; /* bez navodnika! */
   margin-top: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .service-slika {
+    height: 180px; /* manja visina za mobitel */
+  }
+
+  .service-overlay h3 {
+    font-size: 14px;
+  }
 }
