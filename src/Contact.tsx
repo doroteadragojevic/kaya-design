@@ -15,7 +15,7 @@ export default function Kontakt() {
         {/*<p><strong>OIB:</strong> 75350831376</p> */}
         <div className="social-icons">
           {/* Zamijeni linkovima */}
-          <a href="https://www.instagram.com/kayadesign.hr/"><img src="/kaya-design/instagram.jpg" alt="Instagram" /></a>
+          <a href="https://www.instagram.com/kayadesign.hr/"><img src="/instagram.jpg" alt="Instagram" /></a>
          {/* <a href="#"><img src="/linked_in_logo.png" alt="LinkedIn" /></a> */}
           {/*<a href="#"><img src="/facebook-icon.jpg" alt="Facebook" /></a> */}
         </div>
