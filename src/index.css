@@ -7,6 +7,15 @@ body {
   font-family: 'Inter', Arial, sans-serif;
 }
 
+body {
+  background-image: url('/background.jpg'); /* put do tvoje slike */
+  background-size: cover;        /* slika pokriva cijeli ekran */
+  background-position: center;   /* centrirana */
+  background-repeat: no-repeat;  /* bez ponavljanja */
+  background-attachment: fixed;  /* pozadina ostaje pri scrollu */
+  min-height: 100vh;             /* osigurava da body zauzima cijeli viewport */
+}
+
 header {
   display: flex;
   align-items: center;
