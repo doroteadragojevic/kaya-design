@@ -3,7 +3,7 @@ export default function Kontakt() {
     <section className="kontakt-container">
       <div className="kontakt-info">
         <img 
-          src="/kaya-design/logo.jpeg" 
+          src="/logo.jpeg" 
           alt="Logo" 
           className="logo-img"
         />
